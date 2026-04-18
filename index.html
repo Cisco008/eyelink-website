@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eyelink Mitchell's Plain</title>
+  <!-- Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    /* Navigation */
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: transparent
+      padding: 10px 20px;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    /* Hero Section */
+    header {
+      background: url('1first.png') no-repeat center top;
+      height: 110vh;
+      background-size: contain;
+	  display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #000;
+      padding: 0 20px;
+    }
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+    /* Sections */
+    section {
+      padding: 80px 20px;
+      margin-top: 60px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+    /* Expandable content */
+    .expandable {
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+      max-height: 0;
+    }
+    .expandable.expanded {
+      max-height: 500px; /* Adjust based on content */
+    }
+    .read-more {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #007BFF;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    /* Social Media Icons */
+    .social-media {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .social-media a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 24px;
+      transition: color 0.3s ease;
+    }
+    .social-media a:hover {
+      color: #007BFF;
+    }
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header id="home">
+    <div class="container">
+      <h1>Welcome to Eyelink Mitchell's Plain</h1>
+      <p>Your destination for premium spectacles, on-site eye testing, and in-house lab services.</p>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>At Eyelink Mitchell's Plain, we are dedicated to providing exceptional eye care services. Our mission is to ensure you experience clear vision with precision and care.</p>
+      <div id="moreAbout" class="expandable">
+        <p>We specialize in high-quality spectacles, comprehensive on-site eye testing, and state-of-the-art laboratory services. Our experienced team is passionate about offering personalized care, ensuring every customer receives the attention and expertise they deserve.</p>
+      </div>
+      <span id="aboutToggle" class="read-more">Read More</span>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2>Services</h2>
+      <p>Our comprehensive eye care services include:</p>
+      <ul>
+        <li>Spectacle Dispensing</li>
+        <li>On-Site Eye Testing</li>
+        <li>In-House Laboratory Services</li>
+        <li>Frame Adjustments & Repairs</li>
+      </ul>
+      <div id="moreServices" class="expandable">
+        <p>We combine advanced technology with personalized care to deliver accurate eye assessments and high-quality spectacles. Whether you need a quick adjustment or a complete eye exam, our team is here to help you see the world clearly.</p>
+      </div>
+      <span id="servicesToggle" class="read-more">Read More</span>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Have questions or need more information about our services? Reach out to us!</p>
+      <p>Email: info@eyelinkmitchellsplain.co.za</p>
+      <p>Phone: 0213926114</p>
+      <div class="social-media">
+        <a href="https://wa.me/27659289823" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61552788991942" target="_blank" title="facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+		<a href="mailto:info@eyelinkmitchellsplain.co.za?subject=Enquiry from website"></a>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Eyelink Mitchell's Plain. All rights reserved.</p>
+    <div class="social-media">
+      <a href="https://wa.me/27659289823" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61552788991942" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  
+
+<script>
+  function isBrave() {
+    if (navigator.brave && navigator.brave.isBrave) {
+      navigator.brave.isBrave().then(function(result) {
+        if (result) {
+          document.getElementById("brave-banner").style.display = "block";
+        }
+      });
+    }
+  }
+  window.onload = isBrave;
+</script>
+
+<style>
+  #brave-banner {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background: #f4a236;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  #brave-banner a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+</style>
+
+<div id="brave-banner">
+  Support us with <b>Brave Rewards</b>! If you're using Brave, you can 
+  <a href="brave://rewards" target="_blank">tip us BAT</a>.
+</div>
+
+
+</footer>
+
+  <script>
+    // Toggle for About section
+    document.getElementById('aboutToggle').addEventListener('click', function() {
+      var moreAbout = document.getElementById('moreAbout');
+      if (moreAbout.classList.contains('expanded')) {
+        moreAbout.classList.remove('expanded');
+        this.textContent = 'Read More';
+      } else {
+        moreAbout.classList.add('expanded');
+        this.textContent = 'Show Less';
+      }
+    });
+    
+    // Toggle for Services section
+    document.getElementById('servicesToggle').addEventListener('click', function() {
+      var moreServices = document.getElementById('moreServices');
+      if (moreServices.classList.contains('expanded')) {
+        moreServices.classList.remove('expanded');
+        this.textContent = 'Read More';
+      } else {
+        moreServices.classList.add('expanded');
+        this.textContent = 'Show Less';
+      }
+    });
+  </script>
+
+
+
+<!-- 💙 BLACK FRIDAY POPUP (Badge, Mobile-Friendly, Swipeable, Fade-Out, Once Per Visitor) -->
+<div id="blackFridayPopup" style="display:none; opacity:1; transition: opacity 0.5s;">
+  <div class="bf-overlay"></div>
+  <div class="bf-popup">
+    <button id="closeBF" class="bf-close">&times;</button>
+    <h2>💙 Eyelink Mitchells Plain - Black Friday Deals 💙</h2>
+    <p>Exclusive discounts on frames, lenses, and sunglasses this week only!</p>
+    <div class="bf-gallery">
+      <div class="bf-img-wrapper"><img src="images/blackfriday1.png" alt="Deal 1"><span class="bf-badge">BLACK FRIDAY</span></div>
+      <div class="bf-img-wrapper"><img src="images/blackfriday2.png" alt="Deal 2"><span class="bf-badge">BLACK FRIDAY</span></div>
+      <div class="bf-img-wrapper"><img src="images/blackfriday3.png" alt="Deal 3"><span class="bf-badge">BLACK FRIDAY</span></div>
+      <div class="bf-img-wrapper"><img src="images/blackfriday4.png" alt="Deal 4"><span class="bf-badge">BLACK FRIDAY</span></div>
+      <div class="bf-img-wrapper"><img src="images/blackfriday5.jpg" alt="Deal 5"><span class="bf-badge">BLACK FRIDAY</span></div>
+      <div class="bf-img-wrapper"><img src="images/blackfriday6.jpg" alt="Deal 6"><span class="bf-badge">BLACK FRIDAY</span></div>
+    </div>
+  </div>
+</div>
+
+<style>
+#blackFridayPopup {
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  font-family:"Segoe UI", Arial, sans-serif;
+}
+
+.bf-overlay {
+  position:absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(3px);
+}
+
+.bf-popup {
+  position:relative;
+  background:#c9e7ff;
+  border:3px solid #004aad;
+  border-radius:16px;
+  padding:20px;
+  max-width:95%;
+  max-height:90%;
+  overflow-y:auto;
+  text-align:center;
+  z-index:10000;
+  box-shadow:0 0 25px rgba(0,0,0,0.6);
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform: scale(0.9);}
+  to {opacity:1; transform: scale(1);}
+}
+
+.bf-popup h2 { color:#004aad; font-size:1.6em; margin-bottom:6px; }
+.bf-popup p { color:#000; font-size:1em; margin-bottom:15px; }
+
+.bf-gallery {
+  display:flex;
+  flex-wrap: nowrap;
+  overflow-x:auto;
+  gap:10px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.bf-img-wrapper {
+  position: relative;
+  flex:0 0 auto;
+}
+
+.bf-gallery img {
+  width:180px;
+  border-radius:10px;
+  border:2px solid #004aad;
+  transition: transform 0.2s ease;
+}
+
+@media (max-width:600px){
+  .bf-gallery img {
+    width:160px;
+  }
+ } 
+.bf-gallery img:hover { transform: scale(1.05); }
+
+/* Black Friday Badge */
+.bf-badge {
+  position:absolute;
+  top:5px;
+  left:5px;
+  background:red;
+  color:white;
+  font-size:10px;
+  font-weight:bold;
+  padding:2px 5px;
+  border-radius:3px;
+  z-index:10;
+}
+
+.bf-close {
+  position:absolute; top:10px; right:15px;
+  background:#004aad; color:white; border:none; border-radius:50%;
+  width:38px; height:38px; font-size:24px; cursor:pointer;
+  box-shadow:0 0 5px rgba(0,0,0,0.4);
+}
+.bf-close:hover { background:#002f73; }
+
+/* Hide scrollbar on mobile */
+.bf-gallery::-webkit-scrollbar { display:none; }
+.bf-gallery { -ms-overflow-style: none; scrollbar-width: none; }
+
+@media (max-width:600px){
+  .bf-popup { padding:15px; }
+  .bf-popup h2 { font-size:1.4em; }
+  .bf-popup p { font-size:0.95em; }
+  .bf-gallery img { width:120px; }
+}
+</style>
+
+<script>
+window.addEventListener('load', function() {
+  const hasSeenPopup = localStorage.getItem('blackFridaySeen');
+  const popup = document.getElementById('blackFridayPopup');
+  if (!hasSeenPopup) {
+    popup.style.display = 'flex';
+    localStorage.setItem('blackFridaySeen','true');
+
+    // Auto-hide after 20s with fade
+    setTimeout(function(){
+      popup.style.opacity='0';
+      setTimeout(()=>{ popup.style.display='none'; }, 500);
+    },30000);
+  }
+});
+
+// Close button with fade
+document.getElementById('closeBF').addEventListener('click', function(){
+  const popup = document.getElementById('blackFridayPopup');
+  popup.style.opacity='0';
+  setTimeout(()=>{ popup.style.display='none'; }, 500);
+});
+</script>
+<!-- 💙 END BLACK FRIDAY POPUP -->
+
+</body>
+</html>
