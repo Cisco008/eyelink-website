@@ -1,201 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promotions | Eyelink Mitchells Plain</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Promotions - Eyelink Mitchell's Plain</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <style>
+    /* Shared Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    
+    nav { position: fixed; width: 100%; top: 0; left: 0; background: #fff; padding: 10px 20px; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    nav ul { list-style: none; display: flex; justify-content: center; }
+    nav ul li { margin: 0 15px; }
+    nav ul li a { color: #000; text-decoration: none; font-weight: bold; }
 
-<style>
-    /* Basic reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-    }
-    /* Navigation */
-    nav {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      background: transparent
-      padding: 10px 20px;
-      z-index: 1000;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-    }
-    nav ul li {
-      margin: 0 15px;
-    }
-    nav ul li a {
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    /* Hero Section */
-    header {
-      background: url('1first.png') no-repeat center top;
-      height: 110vh;
-      background-size: contain;
-	  display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #000;
-      padding: 0 20px;
-    }
-    header h1 {
-      font-size: 3em;
-      margin-bottom: 0.5em;
-    }
-    /* Sections */
-    section {
-      padding: 80px 20px;
-      margin-top: 60px;
-    }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-    }
-    /* Expandable content */
-    .expandable {
-      overflow: hidden;
-      transition: max-height 0.5s ease;
-      max-height: 0;
-    }
-    .expandable.expanded {
-      max-height: 500px; /* Adjust based on content */
-    }
-    .read-more {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #007BFF;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    /* Social Media Icons */
-    .social-media {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .social-media a {
-      color: #333;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 24px;
-      transition: color 0.3s ease;
-    }
-    .social-media a:hover {
-      color: #007BFF;
-    }
-    /* Footer */
-    footer {
-      background: #333;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
- <style>
-.promo-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-</style>
+    section { padding: 120px 20px 80px; text-align: center; background: #f5faff; min-height: 100vh; }
+    .container { max-width: 1000px; margin: auto; }
 
+    /* MAINTAINED IMAGE SIZES */
+    .promo-img {
+      width: 60%;
+      max-width: 280px;
+      height: auto;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease;
+    }
+    .promo-img:hover { transform: scale(1.05); }
+
+    footer { background: #333; color: #fff; text-align: center; padding: 20px; }
+    .social-media a { color: #fff; margin: 0 10px; font-size: 24px; }
+  </style>
 </head>
-
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-            <li id="promo-nav"><a href="promotions.html">Promotions</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="promotions.html">Promotions</a></li>
+    </ul>
+  </nav>
 
-    <!-- PROMOTIONS SECTION -->
-    <div id="promo-section">
-        <div class="container">
-            <br>
-			<br>
-			<h1>🔥 Current Promotions</h1>
-
-            <img src="images/promo1.png" alt="Promo 1" class="promo-img">
-            <img src="images/promo2.png" alt="Promo 2" class="promo-img">
-
-            <section id="contact">
+  <section id="promotions">
     <div class="container">
-      <h2>Contact Us</h2>
-      <p>Have questions or need more information about our services? Reach out to us!</p>
-      <p>Email: info@eyelinkmitchellsplain.co.za</p>
-      <p>Phone: 0213926114</p>
-      <div class="social-media">
-        <a href="https://wa.me/27659289823" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=61552788991942" target="_blank" title="facebook"><i class="fab fa-facebook"></i></a>
-        <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-		<a href="mailto:info@eyelinkmitchellsplain.co.za?subject=Enquiry from website"></a>
-
-      </div>
+      <h2>🔥 Current Promotions</h2>
+      <img src="images/promo1.png" alt="Promo 1" class="promo-img">
+      <img src="images/promo2.png" alt="Promo 2" class="promo-img">
     </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Eyelink Mitchell's Plain. All rights reserved.</p>
     <div class="social-media">
-      <a href="https://wa.me/27659289823" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://www.facebook.com/profile.php?id=61552788991942" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-      <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/27659289823" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61552788991942" target="_blank"><i class="fab fa-facebook"></i></a>
     </div>
-            </a>
-        </div>
-    </div>
-
-    <!-- EXPIRED MESSAGE -->
-    <div id="promo-expired" style="display:none;">
-        <div class="container">
-            <h1>⚠️ Promotions Have Ended</h1>
-            <p>Contact us on WhatsApp for the latest deals.</p>
-
-            <a href="https://wa.me/27659289823" target="_blank" class="cta-btn">
-                Chat on WhatsApp
-            </a>
-        </div>
-    </div>
-
-   
-    <!-- AUTO EXPIRY SCRIPT -->
-    <script>
-        // Set expiry date (Year, Month-1, Day)
-        const expiryDate = new Date(2026, 3, 30); // April 30, 2026
-        const today = new Date();
-
-        if (today > expiryDate) {
-            const promoSection = document.getElementById("promo-section");
-            const promoExpired = document.getElementById("promo-expired");
-            const promoNav = document.getElementById("promo-nav");
-
-            if (promoSection) promoSection.style.display = "none";
-            if (promoExpired) promoExpired.style.display = "block";
-            if (promoNav) promoNav.style.display = "none";
-        }
-    </script>
+  </footer>
 
 </body>
 </html>
