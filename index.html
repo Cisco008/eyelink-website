@@ -18,13 +18,14 @@
       line-height: 1.6;
       color: #333;
     }
-    /* Navigation */
+
+    /* Navigation - Updated for Autofit */
     nav {
       position: fixed;
       width: 100%;
       top: 0;
       left: 0;
-      background: #fff; /* Changed to solid for better readability with multi-page setup */
+      background: #fff;
       padding: 10px 20px;
       z-index: 1000;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -33,6 +34,7 @@
       list-style: none;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap; /* Allows links to wrap on narrow screens */
     }
     nav ul li {
       margin: 0 15px;
@@ -41,7 +43,33 @@
       color: #000;
       text-decoration: none;
       font-weight: bold;
+      display: inline-block;
+      padding: 5px 0;
     }
+
+    /* Mobile Autofit logic for Android and iPhone */
+    @media (max-width: 600px) {
+      nav {
+        padding: 8px 5px;
+      }
+      nav ul {
+        justify-content: space-around;
+      }
+      nav ul li {
+        margin: 5px;
+        flex: 1 0 30%; /* Fits 3 items across, then wraps the rest */
+        text-align: center;
+      }
+      nav ul li a {
+        font-size: 13px;
+        padding: 10px 5px;
+        background: #f4f4f4; /* Light gray button look for easier tapping */
+        border-radius: 4px;
+        display: block;
+        width: 100%;
+      }
+    }
+
     /* Hero Section */
     header {
       background: url('1first.png') no-repeat center top;
@@ -58,6 +86,13 @@
       font-size: 3em;
       margin-bottom: 0.5em;
     }
+    
+    /* Responsive adjustment for Hero text on mobile */
+    @media (max-width: 600px) {
+      header h1 { font-size: 2em; }
+      header { height: 70vh; } /* Prevents excessive scrolling on small screens */
+    }
+
     /* Sections */
     section {
       padding: 80px 20px;
@@ -205,29 +240,30 @@
       </div>
 
       <div style="background: white; padding: 20px; border-left: 5px solid #2c3e50; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-  <h3 style="margin-bottom: 10px; color: #333;">Banting & Retinal Health</h3>
-  <p style="font-size: 0.95em; color: #555;">
-    Low-carb lifestyles like Banting and Carnivore focus on stabilizing blood sugar. By reducing insulin spikes, you help protect the delicate blood vessels in your eyes from inflammation and leaking.
-  </p>
-  <p style="margin-top: 10px; font-size: 0.85em;">
-    <a href="https://realmealrevolution.com" target="_blank" style="color: #007BFF; text-decoration: underline;">
-      Learn more about the Banting lifestyle
-    </a>
-  </p>
-</div>
-      <div style="background: white; padding: 20px; border-left: 5px solid #6f42c1; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-  <h3 style="margin-bottom: 10px; color: #333;">Metabolic Health with Kelsey Buchalter</h3>
-  <p style="font-size: 0.95em; color: #555;">
-    Struggling to cut out sugar? Health coach and <i>The Human Theatre</i> podcast host, Kelsey Buchalter, shares how animal-based nutrition and Banting can transform your metabolic health—and by extension, your eye health.
-  </p>
-     </a> 
-    
-    <a href="https://podcasts.apple.com/gb/podcast/the-human-theatre/id1625694010" target="_blank" style="color: #007BFF; text-decoration: underline; margin-left: 5px;">
-      Listen to the Podcast
-    </a>
-  </p>
-</div>
-      <div style="text-align: center;">
+        <h3 style="margin-bottom: 10px; color: #333;">Banting & Retinal Health</h3>
+        <p style="font-size: 0.95em; color: #555;">
+          Low-carb lifestyles like Banting and Carnivore focus on stabilizing blood sugar. By reducing insulin spikes, you help protect the delicate blood vessels in your eyes from inflammation and leaking.
+        </p>
+        <p style="margin-top: 10px; font-size: 0.85em;">
+          <a href="https://realmealrevolution.com" target="_blank" style="color: #007BFF; text-decoration: underline;">
+            Learn more about the Banting lifestyle
+          </a>
+        </p>
+      </div>
+
+      <div style="background: white; padding: 20px; border-left: 5px solid #6f42c1; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-top: 20px;">
+        <h3 style="margin-bottom: 10px; color: #333;">Metabolic Health with Kelsey Buchalter</h3>
+        <p style="font-size: 0.95em; color: #555;">
+          Struggling to cut out sugar? Health coach and <i>The Human Theatre</i> podcast host, Kelsey Buchalter, shares how animal-based nutrition and Banting can transform your metabolic health—and by extension, your eye health.
+        </p>
+        <p style="margin-top: 10px; font-size: 0.85em;">
+          <a href="https://podcasts.apple.com/gb/podcast/the-human-theatre/id1625694010" target="_blank" style="color: #007BFF; text-decoration: underline;">
+            Listen to the Podcast
+          </a>
+        </p>
+      </div>
+
+      <div style="text-align: center; margin-top: 30px;">
         <p style="margin-bottom: 15px; font-weight: bold; color: #333;">Worried about your vision?</p>
         <a href="https://wa.me/27659289823?text=Hi%20Eyelink%2C%20I%20would%20like%20to%20book%20an%20eye%20test." 
            style="display: inline-block; background: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.1em; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); transition: transform 0.2s;">
