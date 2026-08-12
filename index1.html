@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eyelink Mitchells Plain</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Navigation - Autofit enabled */
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: #fff;
+      padding: 10px 20px;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      padding: 5px 0;
+    }
+
+    @media (max-width: 600px) {
+      nav { padding: 8px 5px; }
+      nav ul { justify-content: space-around; }
+      nav ul li { margin: 5px; flex: 1 0 30%; text-align: center; }
+      nav ul li a { font-size: 13px; padding: 10px 5px; background: #f4f4f4; border-radius: 4px; display: block; width: 100%; }
+    }
+
+    /* Hero Section - Updated to handle image below text */
+    header {
+      padding: 120px 20px 40px 20px; /* Top padding allows for fixed nav */
+      text-align: center;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      max-width: 800px;
+    }
+    .hero-image {
+      width: 100%;
+      max-width: 1000px; /* Limits size on desktop */
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2em; }
+      header { padding-top: 140px; }
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 20px;
+      margin-top: 20px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+    .expandable {
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+      max-height: 0;
+    }
+    .expandable.expanded {
+      max-height: 500px; 
+    }
+    .read-more {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #007BFF;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .social-media {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .social-media a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 24px;
+      transition: color 0.3s ease;
+    }
+    .social-media a:hover {
+      color: #007BFF;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    #brave-banner {
+      display: none; 
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      background: #f4a236;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-size: 14px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    #brave-banner a {
+      color: white;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Start of OpenWidget (www.openwidget.com) code -->
+<script>
+  window.__ow = window.__ow || {};
+  window.__ow.organizationId = "b39c864d-3e49-42cc-b752-8bdb228e7c2a";
+  window.__ow.integration_name = "manual_settings";
+  window.__ow.product_name = "openwidget";   
+  ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[OpenWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.openwidget.com/openwidget.js",t.head.appendChild(n)}};!n.__ow.asyncInit&&e.init(),n.OpenWidget=n.OpenWidget||e}(window,document,[].slice))
+</script>
+<noscript>You need to <a href="https://www.openwidget.com/enable-javascript" rel="noopener nofollow">enable JavaScript</a> to use the communication tool powered by <a href="https://www.openwidget.com/" rel="noopener nofollow" target="_blank">OpenWidget</a></noscript>
+<!-- End of OpenWidget code -->
+  
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="communities.html">Communities</a></li>
+      <li><a href="promotions.html">Promotions</a></li>
+    </ul>
+  </nav>
+
+  <header id="home">
+    <div class="container">
+      <h1>Welcome to Eyelink Mitchells Plain</h1>
+      <p>Your destination for premium spectacles, on-site eye testing, and in-house lab services.</p>
+    </div>
+    <img src="1first.png" alt="Eyelink Showcase" class="hero-image">
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>At Eyelink Mitchells Plain, we are dedicated to providing exceptional eye care services. Our mission is to ensure you experience clear vision with precision and care.</p>
+      <div id="moreAbout" class="expandable">
+        <p>We specialize in high-quality spectacles, comprehensive on-site eye testing, and state-of-the-art laboratory services. Our experienced team is passionate about offering personalized care, ensuring every customer receives the attention and expertise they deserve.</p>
+      </div>
+      <span id="aboutToggle" class="read-more">Read More</span>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2>Services</h2>
+      <p>Our comprehensive eye care services include:</p>
+      <ul>
+        <li>Spectacle Dispensing</li>
+        <li>On-Site Eye Testing</li>
+        <li>In-House Laboratory Services</li>
+        <li>Frame Adjustments & Repairs</li>
+      </ul>
+      <div id="moreServices" class="expandable">
+        <p>We combine advanced technology with personalized care to deliver accurate eye assessments and high-quality spectacles. Whether you need a quick adjustment or a complete eye exam, our team is here to help you see the world clearly.</p>
+      </div>
+      <span id="servicesToggle" class="read-more">Read More</span>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Have questions or need more information about our services? Reach out to us!</p>
+      <p>Email: info@eyelinkmitchellsplain.co.za</p>
+      <p>Phone: 0213926114</p>
+      <div class="social-media">
+        <a href="https://wa.me/27659289823" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61552788991942" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="eye-health-news" style="background: #fdfdfd; padding: 50px 20px; border-top: 1px solid #e0e0e0;">
+    <div class="container" style="max-width: 800px; margin: auto;">
+      <h2 style="text-align: center; color: #d9534f; margin-bottom: 30px;">🥗 Eye Health & Wellness</h2>
+      
+      <div style="display: grid; gap: 20px; margin-bottom: 40px;">
+        <div style="background: white; padding: 20px; border-left: 5px solid #d9534f; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+          <h3 style="margin-bottom: 10px; color: #333;">The Danger of Hidden Sugars</h3>
+          <p style="font-size: 0.95em; color: #555;">High sugar intake can damage the tiny blood vessels in your retina. Cutting back on processed sweets helps prevent vision blurriness and long-term eye disease like diabetic retinopathy.</p>
+        </div>
+
+        <div style="background: white; padding: 20px; border-left: 5px solid #5cb85c; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+          <h3 style="margin-bottom: 10px; color: #333;">Eat Your Greens</h3>
+          <p style="font-size: 0.95em; color: #555;">Swap the candy for Spinach and Kale! These are packed with Lutein and Zeaxanthin—nutrients that act as a "natural sunblock" for your eyes.</p>
+        </div>
+      </div>
+
+      <div style="background: white; padding: 20px; border-left: 5px solid #2c3e50; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="margin-bottom: 10px; color: #333;">Banting & Retinal Health</h3>
+        <p style="font-size: 0.95em; color: #555;">
+          Low-carb lifestyles like Banting and Carnivore focus on stabilizing blood sugar. By reducing insulin spikes, you help protect the delicate blood vessels in your eyes from inflammation and leaking.
+        </p>
+        <p style="margin-top: 10px; font-size: 0.85em;">
+          <a href="https://realmealrevolution.com" target="_blank" style="color: #007BFF; text-decoration: underline;">
+            Learn more about the Banting lifestyle
+          </a>
+        </p>
+      </div>
+
+      <div style="background: white; padding: 20px; border-left: 5px solid #6f42c1; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-top: 20px;">
+        <h3 style="margin-bottom: 10px; color: #333;">Metabolic Health with Kelsey Buchalter</h3>
+        <p style="font-size: 0.95em; color: #555;">
+          Struggling to cut out sugar? Health coach and <i>The Human Theatre</i> podcast host, Kelsey Buchalter, shares how animal-based nutrition and Banting can transform your metabolic health—and by extension, your eye health.
+        </p>
+        <p style="margin-top: 10px; font-size: 0.85em;">
+          <a href="https://podcasts.apple.com/gb/podcast/the-human-theatre/id1625694010" target="_blank" style="color: #007BFF; text-decoration: underline;">
+            Listen to the Podcast
+          </a>
+        </p>
+      </div>
+
+      <div style="text-align: center; margin-top: 30px;">
+        <p style="margin-bottom: 15px; font-weight: bold; color: #333;">Worried about your vision?</p>
+        <a href="https://wa.me/27659289823?text=Hi%20Eyelink%2C%20I%20would%20like%20to%20book%20an%20eye%20test." 
+           style="display: inline-block; background: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.1em; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); transition: transform 0.2s;">
+          <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Book Your Eye Test via WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Eyelink Mitchells Plain. All rights reserved.</p>
+     <p>Website by Cisco Does Tech</p> <a href="https://wa.me/27813317083" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i><a>
+    <div class="social-media">
+      <a href="https://wa.me/27659289823" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61552788991942" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+    
+    <div id="brave-banner">
+      Support us with <b>Brave Rewards</b>! If you're using Brave, you can 
+      <a href="brave://rewards" target="_blank">tip us BAT</a>.
+    </div>
+  </footer>
+
+  <script>
+    // Toggle for About section
+    document.getElementById('aboutToggle').addEventListener('click', function() {
+      var moreAbout = document.getElementById('moreAbout');
+      if (moreAbout.classList.contains('expanded')) {
+        moreAbout.classList.remove('expanded');
+        this.textContent = 'Read More';
+      } else {
+        moreAbout.classList.add('expanded');
+        this.textContent = 'Show Less';
+      }
+    });
+    
+    // Toggle for Services section
+    document.getElementById('servicesToggle').addEventListener('click', function() {
+      var moreServices = document.getElementById('moreServices');
+      if (moreServices.classList.contains('expanded')) {
+        moreServices.classList.remove('expanded');
+        this.textContent = 'Read More';
+      } else {
+        moreServices.classList.add('expanded');
+        this.textContent = 'Show Less';
+      }
+    });
+
+    // Brave Banner Detection
+    function isBrave() {
+      if (navigator.brave && navigator.brave.isBrave) {
+        navigator.brave.isBrave().then(function(result) {
+          if (result) {
+            document.getElementById("brave-banner").style.display = "block";
+          }
+        });
+      }
+    }
+    window.onload = isBrave;
+  </script>
+
+</body>
+</html>
