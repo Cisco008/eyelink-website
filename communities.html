@@ -114,6 +114,23 @@
       font-size: 1.1em;
       text-shadow: 0 1px 3px rgba(0,0,0,0.6);
     }
+    .community-card .community-chat {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 15px;
+      background: rgba(37, 211, 102, 0.9);
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95em;
+      text-align: center;
+      display: block;
+    }
+    .community-card .community-chat:hover {
+      background: rgba(30, 180, 85, 0.95);
+    }
     @media (max-width: 600px) {
       .community-grid { grid-template-columns: 1fr; }
     }
@@ -164,42 +181,51 @@
     <div class="container">
       <!--
         HOW TO EDIT:
-        - Change each <img src="communityX.jpg"> to the business's image filename.
+        - Change each <img src="..."> to the business's image filename.
         - Change the text inside each .community-heading div to the business name / tagline.
+        - Change each wa.me/27000000000 link to that business's WhatsApp number (format: 27 + number without the leading 0).
         - Upload the image files to the same folder as this page.
       -->
       <div class="community-grid">
         <div class="community-card">
           <div class="community-heading">Trinnity Hair Salon</div>
           <img src="images/trinnity.webp" alt="Business Name 1">
+          <a href="https://wa.me/27000000000" target="_blank" class="community-chat"><i class="fab fa-whatsapp"></i> Click to chat</a>
         </div>
         <div class="community-card">
           <div class="community-heading">CiscoDoesTech</div>
           <img src="images/ciscodoestech.webp" alt="Business Name 2">
+          <a href="https://wa.me/27000000000" target="_blank" class="community-chat"><i class="fab fa-whatsapp"></i> Click to chat</a>
         </div>
         <div class="community-card">
           <div class="community-heading">Business Name 3</div>
           <img src="images/community3.jpg" alt="Business Name 3">
+          <a href="https://wa.me/27000000000" target="_blank" class="community-chat"><i class="fab fa-whatsapp"></i> Click to chat</a>
         </div>
         <div class="community-card">
           <div class="community-heading">Business Name 4</div>
           <img src="images/community4.jpg" alt="Business Name 4">
+          <a href="https://wa.me/27000000000" target="_blank" class="community-chat"><i class="fab fa-whatsapp"></i> Click to chat</a>
         </div>
         <div class="community-card">
           <div class="community-heading">Business Name 5</div>
           <img src="images/community5.jpg" alt="Business Name 5">
+          <a href="https://wa.me/27000000000" target="_blank" class="community-chat"><i class="fab fa-whatsapp"></i> Click to chat</a>
         </div>
         <div class="community-card">
           <div class="community-heading">Business Name 6</div>
           <img src="images/community6.jpg" alt="Business Name 6">
+          <a href="https://wa.me/27000000000" target="_blank" class="community-chat"><i class="fab fa-whatsapp"></i> Click to chat</a>
         </div>
         <div class="community-card">
           <div class="community-heading">Business Name 7</div>
           <img src="images/community7.jpg" alt="Business Name 7">
+          <a href="https://wa.me/27000000000" target="_blank" class="community-chat"><i class="fab fa-whatsapp"></i> Click to chat</a>
         </div>
         <div class="community-card">
           <div class="community-heading">Business Name 8</div>
           <img src="images/community8.jpg" alt="Business Name 8">
+          <a href="https://wa.me/27000000000" target="_blank" class="community-chat"><i class="fab fa-whatsapp"></i> Click to chat</a>
         </div>
       </div>
     </div>
