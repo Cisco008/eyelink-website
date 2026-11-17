@@ -2,12 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.eyelinkmitchellsplain.co.za/</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-17</lastmod>
   </url>
-  <!-- Copy this block for each extra page:
   <url>
-    <loc>https://www.eyelinkmitchellsplain.co.za/contact.html</loc>
-    <lastmod>2026-11-13</lastmod>
+    <loc>https://www.eyelinkmitchellsplain.co.za/communities.html</loc>
+    <lastmod>2026-11-17</lastmod>
   </url>
-  -->
+  <url>
+    <loc>https://www.eyelinkmitchellsplain.co.za/promotions.html</loc>
+    <lastmod>2026-11-17</lastmod>
+  </url>
 </urlset>
